@@ -5,6 +5,10 @@ import Grid from "@material-ui/core/Grid";
 
 
 export default class Login extends React.Component {
+
+    state = {
+        online: false
+    };
   
 	render(){
 		return (
