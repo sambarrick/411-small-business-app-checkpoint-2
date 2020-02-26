@@ -3,16 +3,27 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 
+class App extends Component {
+  state = {
+    username: "",
+    password: ""
+  };
 
-export default class Login extends React.Component {
+  handleTextChange = e => {
+    const state = { ...this.state };
+    state[e.target.name] = e.target.value;
+    this.setState(state);
+  };
 
-    state = {
-        online: false
-    };
-  
-	render(){
-		return (
+  login = e => {
+    e.preventDefault();
+    // set cookie here
+    document.cookie = "loggedIn=true;max-age=60*1000";
+    window.location.replace("/");
+  };
 
+  render() {
+    return (
       <Grid container direction="row" justify="center" alignItems="center">
         <form>
           <TextField
@@ -31,16 +42,21 @@ export default class Login extends React.Component {
             type="password"
           />
           <br />
-		  <Button
+          <Button
             type="submit"
-			variant="contained"
-			fullWidth
+            variant="contained"
+            fullWidth
             color="primary"
-            onClick={() => { this.props.onLogin() }}
-          >LOGIN
+            onClick={() => {
+              this.props.onLogin();
+            }}
+          >
+            LOGIN
           </Button>
         </form>
       </Grid>
-    
-		)};
-};
+    );
+  }
+}
+
+export default App

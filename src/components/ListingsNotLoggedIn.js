@@ -1,12 +1,11 @@
 import React from 'react'
 import {
-    Container,
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow
-} from '@material-ui/core'
+  Container,
+  Table,
+  TableCell,
+  TableHead,
+  TableRow
+} from "@material-ui/core";
 
 const ListingsNotLoggedIn = () => {
     return(
