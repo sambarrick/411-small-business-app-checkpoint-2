@@ -4,14 +4,23 @@ import {
   Table,
   TableCell,
   TableHead,
-  TableRow
+  TableRow, 
+  Button,
+  DeleteIcon
 } from "@material-ui/core";
 import {checkAuth} from '../Router'
+import AddBusiness from '../components/AddBusiness'
 
 const Listings = () => {
     return(
         <Container maxWidth="md" className="container">
       <div>
+      <div className="loggedin-header">
+      { checkAuth() &&
+        <AddBusiness />
+    }
+       
+      </div>
             <Table>
                 <TableHead>
                     <TableRow>
@@ -20,13 +29,13 @@ const Listings = () => {
                         <TableCell>Hours</TableCell>
                         <TableCell>Address</TableCell>
                         { checkAuth() &&
-                        
-                        
                             <TableCell>Delete</TableCell>
                           }
+                          
                     </TableRow>
                 </TableHead>
                 </Table>
+                
                 </div>
         </Container>
     )
