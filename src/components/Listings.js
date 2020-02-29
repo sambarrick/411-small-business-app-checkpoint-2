@@ -1,16 +1,16 @@
 import React from 'react'
 import {
-    Container,
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow
-} from '@material-ui/core'
+  Container,
+  Table,
+  TableCell,
+  TableHead,
+  TableRow
+} from "@material-ui/core";
+import {checkAuth} from '../Router'
 
-const ListingsLoggedIn = () => {
+const Listings = () => {
     return(
-        <Container maxWidth="md" className="car-container">
+        <Container maxWidth="md" className="container">
       <div>
             <Table>
                 <TableHead>
@@ -19,7 +19,11 @@ const ListingsLoggedIn = () => {
                         <TableCell>Description</TableCell>
                         <TableCell>Hours</TableCell>
                         <TableCell>Address</TableCell>
-                        <TableCell>Delete</TableCell>
+                        { checkAuth() &&
+                        
+                        
+                            <TableCell>Delete</TableCell>
+                          }
                     </TableRow>
                 </TableHead>
                 </Table>
@@ -28,4 +32,4 @@ const ListingsLoggedIn = () => {
     )
 }
 
-export default ListingsLoggedIn
+export default Listings

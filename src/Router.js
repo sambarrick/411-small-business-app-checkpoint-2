@@ -2,11 +2,12 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
 import cookie from 'cookie'
 import Login from './components/Login'
-import ListingsNotLoggedIn from './components/ListingsNotLoggedIn'
+import Listings from './components/Listings'
+import NavBar from './components/NavBar'
 
 // Write checkAuth function here
 // Check the cookies for a cookie called "loggedIn"
-const checkAuth = () => {
+export const checkAuth = () => {
     const cookies = cookie.parse(document.cookie)
     return cookies["loggedIn"] ? true : false
 }
@@ -26,8 +27,9 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 const Router = () => {
     return (
         <Switch>
+        <Route exact path="/" component={Listings}/>
             <Route path="/login" component={Login} />
-            <Route path="/listingsnotloggedin" component={ListingsNotLoggedIn} />
+            <Route path="/listings" component={Listings} />
         </Switch>
     );
 };

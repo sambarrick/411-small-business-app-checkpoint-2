@@ -66,3 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+Ask Wes about:
+
+2) Display navbar and login screen as default. It is already doing this, but ask how this works to display both components when only the <NavBar> is listed under App.js
+
+3) Condensing my components? Can I consolidate my nav bars so that I can just get "login" to change to "logout" based on the status of login? 
+
+4) How about "Listings" once I'm logged in? When I click it again, it just goes back to the listings style menu that I coded for non-logged in users.

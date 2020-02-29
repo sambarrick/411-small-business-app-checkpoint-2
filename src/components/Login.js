@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
+import {TextField, Button, Container} from "@material-ui/core";
+import {checkAuth} from '../Router'
 
 class App extends Component {
   state = {
@@ -14,49 +13,45 @@ class App extends Component {
     state[e.target.name] = e.target.value;
     this.setState(state);
   };
-
   login = e => {
     e.preventDefault();
     // set cookie here
-    document.cookie = "loggedIn=true;max-age=60*1000";
+    document.cookie = "loggedIn=true;max-age=60*5000";
     window.location.replace("/");
   };
 
   render() {
     return (
-      <Grid container direction="row" justify="center" alignItems="center">
-        <form>
-          <TextField
-            variant="standard"
-            margin="normal"
-            id="email"
-            label="Username*"
-            name="email"
-          />
-          <br />
-          <TextField
-            variant="standard"
-            margin="normal"
-            id="password"
-            label="Password*"
-            type="password"
-          />
-          <br />
-          <Button
-            type="submit"
-            variant="contained"
-            fullWidth
-            color="primary"
-            onClick={() => {
-              this.props.onLogin();
-            }}
-          >
-            LOGIN
-          </Button>
-        </form>
-      </Grid>
+      <div className="App">
+        <Container maxWidth="sm">
+          <form className="login-form" onSubmit={this.login}>
+            <TextField
+              required
+              onChange={this.handleTextChange}
+              value={this.state.username}
+              name="username"
+              label="Username"
+              type="text" />
+              <br />
+            <TextField
+              required
+              onChange={this.handleTextChange}
+              value={this.state.password}
+              name="password"
+              label="Password"
+              type="password" />
+              <br />
+            <Button
+              type="submit"
+              className="login-button"
+              variant="contained"
+              color="primary"
+              >Login</Button>
+          </form>
+        </Container>
+      </div>
     );
   }
 }
 
-export default App
+export default App;

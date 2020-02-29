@@ -2,9 +2,20 @@
   /* text-align: center; */
 }
 
+.menu{
+  background: rgb(198, 218, 198);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 50%;
 }
 
 .nav-list {

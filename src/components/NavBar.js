@@ -4,6 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom'
+import {checkAuth} from '../Router'
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,17 +24,25 @@ export default function ButtonAppBar() {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="relative">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Austin Small Business
+           <Link to="/">Austin Small Business</Link> 
           </Typography>
           <ul className="nav-list">
                     <li className="nav-list-item">
-                    <Link to="/listingsnotloggedin">Listings</Link>
+                    <Link to="/listings">Listings</Link>
                     </li>
                     <li className="nav-list-item">
-                       Login
+
+                      { !checkAuth() &&
+                        <Link to="/login">Login</Link>
+
+                      }
+                    
+
+
+
                     </li>
                     </ul>
         </Toolbar>
