@@ -48,9 +48,11 @@ class AddBusiness extends Component {
         return (
             <Fragment>
                 <div style={{ textAlign: 'center' }}>
+                <h2 style={{ textAlign: 'left'}}>Logged in as: Pendejo!</h2>
                     <h1>Add Business:</h1>
                     <Button
                         variant="contained"
+                        color="primary"
                         className="add-business"
                         onClick={this.toggleDialog}
                     >

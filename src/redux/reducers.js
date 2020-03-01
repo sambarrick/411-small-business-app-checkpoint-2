@@ -15,4 +15,5 @@ const business = (state = [], action) => {
     }
 }
 
+
 export default combineReducers({ user, business })

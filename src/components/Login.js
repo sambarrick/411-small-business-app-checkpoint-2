@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {TextField, Button, Container} from "@material-ui/core";
-import {checkAuth} from '../Router'
+//import {checkAuth} from '../Router'
 
 class App extends Component {
   state = {
