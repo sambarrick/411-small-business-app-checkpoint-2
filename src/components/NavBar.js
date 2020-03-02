@@ -33,8 +33,10 @@ export default function ButtonAppBar() {
               <Link to="/listings">Listings</Link>
             </li>
             <li className="nav-list-item">
-              {!checkAuth() && <Link to="/login">Login</Link>}
+              {!checkAuth() ? <Link to="/login">Login</Link>
+              : <Link to="/login">Logout</Link>}
             </li>
+            
           </ul>
         </Toolbar>
       </AppBar>

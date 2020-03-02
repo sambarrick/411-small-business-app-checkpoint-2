@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router'
 import cookie from 'cookie'
 import Login from './components/Login'
 import Listings from './components/Listings'
-import NavBar from './components/NavBar'
+
 
 // Write checkAuth function here
 // Check the cookies for a cookie called "loggedIn"

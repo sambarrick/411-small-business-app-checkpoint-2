@@ -27,8 +27,8 @@ const Listings = (props) => {
             </TableRow>
           </TableHead>
           
-          {/*<TableBody>
-            {props.business.map((business, idx) => (
+        {/*  <TableBody>
+            {props.business.map((business, index) => (
               <TableRow key={business.id}>
                 <TableCell component="th" scope="row">
                   {business.id}
@@ -39,13 +39,13 @@ const Listings = (props) => {
                 <TableCell>{business["address"]}</TableCell>
                 <TableCell>
                   <DeleteIcon
-                    onClick={() => props.removeBusiness(idx)}
+                    onClick={() => props.removeBusiness(index)}
                     className="icon text-red"
                   />
                 </TableCell>
               </TableRow>
             ))}
-            </TableBody>*/}  {/**/}
+            </TableBody>  */}
         </Table>
       </div>
     </Container>

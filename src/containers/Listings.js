@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import Listings from '../components/Listings';
-import {removeBusiness} from '../redux/actions'
+import {addBusiness, removeBusiness} from '../redux/actions'
 
 const mapStateToProps = (state) => {
     return {
         user: state.user,
-        business: state.cars
+        business: state.business
     }
 }
 

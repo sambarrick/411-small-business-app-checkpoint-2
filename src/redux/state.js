@@ -1,7 +1,7 @@
 export default {
     user: {
         username: 'testUser',
-        email: 'testuse@example.com',
+        email: 'testuser@example.com',
         loggedIn: false
     },
     business: [
