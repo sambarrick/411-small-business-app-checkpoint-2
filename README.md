@@ -69,8 +69,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 Ask Wes about:
 
-1) AddBusiness component. When I add a business, show him the error message. Line 32 says "it is not a function".
-
-2) Make column for id?
-
 3) Make separate page for business descriptions? If we are displaying details in the list, why do we need a separate page to see details for the specific business?

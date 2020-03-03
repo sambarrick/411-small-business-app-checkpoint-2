@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar'
-import Login from './components/Login';
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Router from './Router'
 import store from './redux/store'
+import Business from './components/Business'
 
 function App() {
   return (

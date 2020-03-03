@@ -9,7 +9,8 @@ import {
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { checkAuth } from "../Router";
-import AddBusiness from "../components/AddBusiness";
+import AddBusiness from "../containers/AddBusiness";
+import { Link } from "react-router-dom";
 
 const Listings = (props) => {
   return (
@@ -19,6 +20,7 @@ const Listings = (props) => {
         <Table>
           <TableHead>
             <TableRow>
+            <TableCell>id</TableCell>
               <TableCell>Name</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Hours</TableCell>
@@ -27,25 +29,25 @@ const Listings = (props) => {
             </TableRow>
           </TableHead>
           
-        {/*  <TableBody>
+         <TableBody>
             {props.business.map((business, index) => (
               <TableRow key={business.id}>
                 <TableCell component="th" scope="row">
                   {business.id}
                 </TableCell>
-                <TableCell>{business["name"]}</TableCell>
+               <Link to={`/business/${business.name}`}> <TableCell>{business["name"]}</TableCell> </Link>
                 <TableCell>{business["description"]}</TableCell>
                 <TableCell>{business["hours"]}</TableCell>
                 <TableCell>{business["address"]}</TableCell>
                 <TableCell>
-                  <DeleteIcon
+                {checkAuth() &&   <DeleteIcon
                     onClick={() => props.removeBusiness(index)}
                     className="icon text-red"
-                  />
+                  /> }
                 </TableCell>
               </TableRow>
             ))}
-            </TableBody>  */}
+            </TableBody>  
         </Table>
       </div>
     </Container>
