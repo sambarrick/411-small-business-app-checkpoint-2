@@ -9,7 +9,7 @@ export default {
         {
         'id': 1,
         "name": "Tan My Restaurant",
-        'description': "lorem",
+        'description': "Vietnamese",
         'hours': "10am-9pm",
         'address': "1601 Ohlen Rd # E, Austin, TX 78758"
     },
@@ -17,9 +17,10 @@ export default {
     {
     'id': 2,
     "name": "Curra's",
-    'description': "lorem",
+    'description': "Mexican",
     'hours': "10am-9pm",
     'address': "614 E Oltorf St, Austin, TX 78704"
 }
+
     ]
 }

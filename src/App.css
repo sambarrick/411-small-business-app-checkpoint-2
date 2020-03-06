@@ -6,9 +6,8 @@
   background: rgb(198, 218, 198);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-bar-color{
+  background-color: #3ea9bb !important;
 }
 
 .login-form {
@@ -32,6 +31,23 @@ a {
   color: inherit;
 }
 
+.login-button{
+  background-color: #3ea9bb!important;
+  color: white !important;
+}
+
 .add-business{
-  background:  #4caf50 !important;
+  background:  #3ea9bb !important;
+}
+
+.icon {
+  color: red;
+}
+
+.listing-container{
+  text-align: center;
+}
+
+.listing-description-span{
+  color: rgb(128, 87, 87);
 }

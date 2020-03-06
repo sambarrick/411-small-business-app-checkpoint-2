@@ -49,7 +49,7 @@ class AddBusiness extends Component {
         return (
             <Fragment>
                 <div style={{ textAlign: 'center' }}>
-                <h2 style={{ textAlign: 'left'}}>Logged in as: username</h2>
+                <h2 style={{ textAlign: 'left'}}>Logged in as: User</h2>
                     <h1>Add Business:</h1>
                     <Button
                         variant="contained"

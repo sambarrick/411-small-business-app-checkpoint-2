@@ -7,6 +7,7 @@ import {
   TableRow,
   TableBody
 } from "@material-ui/core";
+import Tooltip from '@material-ui/core/Tooltip';
 import DeleteIcon from "@material-ui/icons/Delete";
 import { checkAuth } from "../Router";
 import AddBusiness from "../containers/AddBusiness";
@@ -31,20 +32,17 @@ const Listings = (props) => {
           
          <TableBody>
             {props.business.map((business, index) => (
-              <TableRow key={business.id}>
+              <TableRow key={business.name}>
                 <TableCell component="th" scope="row">
                   {business.id}
                 </TableCell>
-               <Link to={`/business/${business.name}`}> <TableCell>{business["name"]}</TableCell> </Link>
+            <Link to={`/business/${business.name}`}><TableCell>{business["name"]}</TableCell></Link>
                 <TableCell>{business["description"]}</TableCell>
                 <TableCell>{business["hours"]}</TableCell>
                 <TableCell>{business["address"]}</TableCell>
-                <TableCell>
-                {checkAuth() &&   <DeleteIcon
-                    onClick={() => props.removeBusiness(index)}
-                    className="icon text-red"
-                  /> }
-                </TableCell>
+                <Tooltip title="Delete"><TableCell>
+                    {checkAuth() && <DeleteIcon onClick={() => props.removeBusiness(index)}
+                            className="icon text-red" /> }</TableCell></Tooltip>
               </TableRow>
             ))}
             </TableBody>  

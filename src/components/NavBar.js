@@ -23,7 +23,7 @@ export default function ButtonAppBar() {
 
   return (
     <div>
-      <AppBar position="relative">
+      <AppBar position="relative" className="nav-bar-color">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <Link to="/">Austin Small Business</Link>
