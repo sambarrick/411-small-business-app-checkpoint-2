@@ -32,7 +32,7 @@ const Listings = (props) => {
           
          <TableBody>
             {props.business.map((business, index) => (
-              <TableRow key={business.name}>
+              <TableRow>
                 <TableCell component="th" scope="row">
                   {business.id}
                 </TableCell>
