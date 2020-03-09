@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {TextField, Button, Container} from "@material-ui/core";
-//import {checkAuth} from '../Router'
+import { Link } from "react-router-dom";
+import {checkAuth} from '../Router'
 
 class App extends Component {
   state = {
@@ -44,6 +45,7 @@ class App extends Component {
             <Button className="login-button"
               type="submit"
               variant="contained"
+              fullWidth
               >Login</Button>
           </form>
         </Container>

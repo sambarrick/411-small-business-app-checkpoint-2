@@ -36,7 +36,6 @@ export default function ButtonAppBar() {
               {!checkAuth() ? <Link to="/login">Login</Link>
               : <Link to="/login">Logout</Link>}
             </li>
-            
           </ul>
         </Toolbar>
       </AppBar>

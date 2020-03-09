@@ -5,7 +5,8 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  TableBody
+  TableBody,
+
 } from "@material-ui/core";
 import Tooltip from '@material-ui/core/Tooltip';
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -40,6 +41,8 @@ const Listings = (props) => {
                 <TableCell>{business["description"]}</TableCell>
                 <TableCell>{business["hours"]}</TableCell>
                 <TableCell>{business["address"]}</TableCell>
+                <TableCell></TableCell>
+
                 <Tooltip title="Delete"><TableCell>
                     {checkAuth() && <DeleteIcon onClick={() => props.removeBusiness(index)}
                             className="icon text-red" /> }</TableCell></Tooltip>
